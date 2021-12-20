@@ -21,13 +21,13 @@ class RepositoryTests: XCTestCase {
         guard let filePath = Bundle.main.url(forResource: "AllMovies", withExtension: "json")
             else { fatalError("File not found!") }
         let data = try! Data(contentsOf: filePath)
-        stub(condition: isHost("testsuccess.com")) { _ in OHHTTPStubsResponse(data: data, statusCode: 200, headers: nil) }
-        stub(condition: isHost("testfail.com")) { _ in OHHTTPStubsResponse(jsonObject: [:], statusCode: 200, headers: nil) }
+//        stub(condition: isHost("testsuccess.com")) { _ in OHHTTPStubsResponse(data: data, statusCode: 200, headers: nil) }
+//        stub(condition: isHost("testfail.com")) { _ in OHHTTPStubsResponse(jsonObject: [:], statusCode: 200, headers: nil) }
     }
     
     override func tearDown() {
         super.tearDown()
-        OHHTTPStubs.removeAllStubs()
+//        OHHTTPStubs.removeAllStubs()
     }
     
     func testAPICLientSucess() {

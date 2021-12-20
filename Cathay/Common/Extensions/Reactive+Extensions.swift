@@ -12,6 +12,7 @@ import RxSwift
 import RxCocoa
 import RxOptional
 import MBProgressHUD
+import Combine
 
 extension RxSwift.Reactive where Base: UIViewController {
     public var viewDidLoad: Observable<Void> {
